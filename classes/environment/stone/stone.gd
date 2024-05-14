@@ -19,5 +19,5 @@ func update_volume(jug):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if water_volume <= 0:
-		self.get_node("Area2D/Sprite/pool").visible = false
+		self.get_node("Area2D/Sprite2D/pool").visible = false
 	pass

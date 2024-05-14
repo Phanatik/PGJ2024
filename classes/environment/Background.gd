@@ -1,4 +1,4 @@
-extends Sprite
+extends Sprite2D
 
 const VELOCITY: float = -1.5
 var g_texture_width: float = 0

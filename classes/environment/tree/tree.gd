@@ -6,7 +6,7 @@ var level = 0
 var baseXP = 0
 var reqXP = 0
 
-func get_tree():
+func get_tree_node():
 	return self.get_node("tree")
 # Called when the node enters the scene tree for the first time.
 
@@ -15,12 +15,12 @@ func update_req():
 
 func _ready():
 	update_req()
-	var tree = self.get_tree()
+	var tree = self.get_tree_node()
 	tree.visible = false
 	pass # Replace with function body.
 
 func update_texture():
-	var tree = self.get_tree()
+	var tree = self.get_tree_node()
 	if not tree.visible:
 		tree.visible = true
 	tree.frame = level

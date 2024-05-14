@@ -1,13 +1,13 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 func get_jug():
 	return self.get_node("jug")
 	
-export (int) var run_speed = 300
-export (int) var jump_speed = -600
-export (int) var gravity = 1200
+@export var run_speed = 300
+@export var jump_speed = -600
+@export var gravity = 1200
 
-var velocity = Vector2()
+#var velocity = Vector2()
 var jumping = false
 var can_interact_with_tree = false
 var can_interact_with_stone = false
@@ -24,10 +24,10 @@ func get_input():
 		jumping = true
 		velocity.y = jump_speed
 	if right:
-		$Sprite.flip_h = false
+		$Sprite2D.flip_h = false
 		velocity.x += run_speed
 	if left:
-		$Sprite.flip_h = true
+		$Sprite2D.flip_h = true
 		velocity.x -= run_speed
 
 func _physics_process(delta):
@@ -35,7 +35,10 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 	if jumping and is_on_floor():
 		jumping = false
-	velocity = move_and_slide(velocity, Vector2(0, -1))
+	set_velocity(velocity)
+	set_up_direction(Vector2(0, -1))
+	move_and_slide()
+	velocity = velocity
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

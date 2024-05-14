@@ -1,156 +1,156 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=9 format=3 uid="uid://dd6my8v0gg33x"]
 
-[ext_resource path="res://classes/environment/cave.tscn" type="PackedScene" id=1]
-[ext_resource path="res://classes/player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://classes/environment/floor.tscn" type="PackedScene" id=3]
-[ext_resource path="res://classes/environment/tree/tree.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/environment/background.png" type="Texture" id=5]
-[ext_resource path="res://classes/environment/Background.gd" type="Script" id=6]
-[ext_resource path="res://classes/environment/stone/stone.tscn" type="PackedScene" id=7]
+[ext_resource type="PackedScene" path="res://classes/environment/cave.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://classes/player/Player.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://classes/environment/floor.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://classes/environment/tree/tree.tscn" id="4"]
+[ext_resource type="Texture2D" uid="uid://3vhk38billsf" path="res://assets/environment/background.png" id="5"]
+[ext_resource type="Script" path="res://classes/environment/Background.gd" id="6"]
+[ext_resource type="PackedScene" path="res://classes/environment/stone/stone.tscn" id="7"]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 153.818 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(20, 307.636)
 
 [node name="Level1" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 569.81, 458.263 )
+[node name="Player" parent="." instance=ExtResource("2")]
+position = Vector2(569.81, 458.263)
 
-[node name="floor" parent="." instance=ExtResource( 3 )]
-position = Vector2( 150, 510 )
-scale = Vector2( 3, 3 )
+[node name="floor" parent="." instance=ExtResource("3")]
+position = Vector2(150, 510)
+scale = Vector2(3, 3)
 
-[node name="floor2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 400, 510 )
-scale = Vector2( 3, 3 )
+[node name="floor2" parent="." instance=ExtResource("3")]
+position = Vector2(400, 510)
+scale = Vector2(3, 3)
 
-[node name="floor3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 673.034, 510 )
-scale = Vector2( 3, 3 )
+[node name="floor3" parent="." instance=ExtResource("3")]
+position = Vector2(673.034, 510)
+scale = Vector2(3, 3)
 
-[node name="floor4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 920.668, 510 )
-scale = Vector2( 3, 3 )
+[node name="floor4" parent="." instance=ExtResource("3")]
+position = Vector2(920.668, 510)
+scale = Vector2(3, 3)
 
-[node name="floor5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1200, 510 )
-scale = Vector2( 3, 3 )
+[node name="floor5" parent="." instance=ExtResource("3")]
+position = Vector2(1200, 510)
+scale = Vector2(3, 3)
 
-[node name="floor6" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1400, 510 )
-scale = Vector2( 3, 3 )
+[node name="floor6" parent="." instance=ExtResource("3")]
+position = Vector2(1400, 510)
+scale = Vector2(3, 3)
 
-[node name="floor7" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1534.92, 510 )
-scale = Vector2( 3, 3 )
+[node name="floor7" parent="." instance=ExtResource("3")]
+position = Vector2(1534.92, 510)
+scale = Vector2(3, 3)
 
-[node name="floor8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 1809.33, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor8" parent="." instance=ExtResource("3")]
+position = Vector2(1809.33, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor9" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2059.33, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor9" parent="." instance=ExtResource("3")]
+position = Vector2(2059.33, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor10" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2332.36, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor10" parent="." instance=ExtResource("3")]
+position = Vector2(2332.36, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor11" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2580, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor11" parent="." instance=ExtResource("3")]
+position = Vector2(2580, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor12" parent="." instance=ExtResource( 3 )]
-position = Vector2( 2859.33, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor12" parent="." instance=ExtResource("3")]
+position = Vector2(2859.33, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor13" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3059.33, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor13" parent="." instance=ExtResource("3")]
+position = Vector2(3059.33, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor14" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3194.25, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor14" parent="." instance=ExtResource("3")]
+position = Vector2(3194.25, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor15" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4364.36, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor15" parent="." instance=ExtResource("3")]
+position = Vector2(4364.36, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor16" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3472, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor16" parent="." instance=ExtResource("3")]
+position = Vector2(3472, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor17" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3751.33, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor17" parent="." instance=ExtResource("3")]
+position = Vector2(3751.33, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor18" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3951.33, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor18" parent="." instance=ExtResource("3")]
+position = Vector2(3951.33, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor19" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4086.25, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor19" parent="." instance=ExtResource("3")]
+position = Vector2(4086.25, 513.564)
+scale = Vector2(3, 3)
 
-[node name="floor20" parent="." instance=ExtResource( 3 )]
-position = Vector2( 4463.25, 513.564 )
-scale = Vector2( 3, 3 )
+[node name="floor20" parent="." instance=ExtResource("3")]
+position = Vector2(4463.25, 513.564)
+scale = Vector2(3, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="floor20"]
-position = Vector2( 38.8433, -33.9344 )
-scale = Vector2( 0.333333, 0.333333 )
-shape = SubResource( 1 )
+position = Vector2(38.8433, -33.9344)
+scale = Vector2(0.333333, 0.333333)
+shape = SubResource("1")
 
-[node name="cave" parent="." instance=ExtResource( 1 )]
-position = Vector2( 367.187, 475.039 )
-scale = Vector2( 3, 3 )
+[node name="cave" parent="." instance=ExtResource("1")]
 z_index = -1
+position = Vector2(367.187, 475.039)
+scale = Vector2(3, 3)
 
-[node name="TreePot" parent="." instance=ExtResource( 4 )]
-position = Vector2( 823.179, 505.836 )
+[node name="TreePot" parent="." instance=ExtResource("4")]
+position = Vector2(823.179, 505.836)
 
-[node name="Background" type="Sprite" parent="."]
-position = Vector2( 385, 180 )
-scale = Vector2( 3, 3 )
+[node name="Background" type="Sprite2D" parent="."]
 z_index = -10
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
+position = Vector2(385, 180)
+scale = Vector2(3, 3)
+texture = ExtResource("5")
+script = ExtResource("6")
 
-[node name="Background2" type="Sprite" parent="."]
-position = Vector2( 1151, 180 )
-scale = Vector2( 3, 3 )
+[node name="Background2" type="Sprite2D" parent="."]
 z_index = -10
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
+position = Vector2(1151, 180)
+scale = Vector2(3, 3)
+texture = ExtResource("5")
+script = ExtResource("6")
 
-[node name="Background3" type="Sprite" parent="."]
-position = Vector2( 1917.47, 176.436 )
-scale = Vector2( 3, 3 )
+[node name="Background3" type="Sprite2D" parent="."]
 z_index = -10
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
+position = Vector2(1917.47, 176.436)
+scale = Vector2(3, 3)
+texture = ExtResource("5")
+script = ExtResource("6")
 
-[node name="Background4" type="Sprite" parent="."]
-position = Vector2( 2678.73, 180 )
-scale = Vector2( 3, 3 )
+[node name="Background4" type="Sprite2D" parent="."]
 z_index = -10
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
+position = Vector2(2678.73, 180)
+scale = Vector2(3, 3)
+texture = ExtResource("5")
+script = ExtResource("6")
 
-[node name="Background5" type="Sprite" parent="."]
-position = Vector2( 3444.25, 181.782 )
-scale = Vector2( 3, 3 )
+[node name="Background5" type="Sprite2D" parent="."]
 z_index = -10
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
+position = Vector2(3444.25, 181.782)
+scale = Vector2(3, 3)
+texture = ExtResource("5")
+script = ExtResource("6")
 
-[node name="Background6" type="Sprite" parent="."]
-position = Vector2( 4205.52, 185.345 )
-scale = Vector2( 3, 3 )
+[node name="Background6" type="Sprite2D" parent="."]
 z_index = -10
-texture = ExtResource( 5 )
-script = ExtResource( 6 )
+position = Vector2(4205.52, 185.345)
+scale = Vector2(3, 3)
+texture = ExtResource("5")
+script = ExtResource("6")
 
-[node name="stone" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1993.59, 284.973 )
-scale = Vector2( 2, 2 )
+[node name="stone" parent="." instance=ExtResource("7")]
+position = Vector2(1993.59, 284.973)
+scale = Vector2(2, 2)
