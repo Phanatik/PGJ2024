@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_start_button_pressed():
-	var scene = load("res://scenes/level1.tscn")
+	var scene = load("res://level1.tscn")
 	get_tree().change_scene_to_packed(scene)
 	pass # Replace with function body.
 
@@ -24,3 +24,4 @@ func _on_quit_button_pressed():
 
 func _on_controls_pressed():
 	var scene = load("res://scenes/control_menu.tscn")
+	get_tree().change_scene_to_packed(scene)
