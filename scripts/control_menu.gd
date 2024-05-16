@@ -13,3 +13,4 @@ func _process(delta):
 
 func _on_back_pressed():
 	var scene = load("res://scenes/MainMenu.tscn")
+	get_tree().change_scene_to_packed(scene)
