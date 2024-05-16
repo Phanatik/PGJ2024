@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dd6my8v0gg33x"]
+[gd_scene load_steps=9 format=3 uid="uid://2exfl4r8njab"]
 
 [ext_resource type="PackedScene" path="res://classes/environment/cave.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://classes/player/Player.tscn" id="2"]
