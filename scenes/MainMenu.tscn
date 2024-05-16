@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8f42e3aor2xs"]
+[gd_scene load_steps=3 format=3 uid="uid://c8f42e3aor2xs"]
 
 [ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_l6q04"]
+[ext_resource type="Texture2D" uid="uid://bimoas6i2ns8c" path="res://assets/menu/Main-menu_art.png" id="2_i1nyp"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,10 +12,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l6q04")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 0
-offset_right = 1150.0
-offset_bottom = 648.0
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_i1nyp")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -37,9 +42,19 @@ layout_mode = 2
 layout_mode = 2
 text = "Start"
 
+[node name="Controls" type="Button" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+
 [node name="QuitButton" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 text = "Quit"
 
+[node name="TITLE" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 399.0
+offset_bottom = 304.0
+
 [connection signal="pressed" from="PanelContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

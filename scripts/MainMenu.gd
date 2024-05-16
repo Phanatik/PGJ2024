@@ -20,3 +20,7 @@ func _on_start_button_pressed():
 func _on_quit_button_pressed():
 	get_tree().quit()
 	pass # Replace with function body.
+
+
+func _on_controls_pressed():
+	var scene = load("res://scenes/control_menu.tscn")
