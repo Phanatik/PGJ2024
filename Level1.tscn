@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://2exfl4r8njab"]
 
 [ext_resource type="PackedScene" path="res://classes/environment/cave.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://classes/player/Player.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cbc6dhmo3m4ah" path="res://classes/player/Player.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://classes/environment/floor.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://classes/environment/tree/tree.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://yfd4ya0mycxt" path="res://classes/environment/tree/tree.tscn" id="4"]
 [ext_resource type="Texture2D" uid="uid://3vhk38billsf" path="res://assets/environment/background.png" id="5"]
 [ext_resource type="Script" path="res://classes/environment/Background.gd" id="6"]
 [ext_resource type="PackedScene" path="res://classes/environment/stone/stone.tscn" id="7"]

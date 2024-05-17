@@ -18,17 +18,23 @@ func get_input():
 	velocity.x = 0
 	var right = Input.is_action_pressed('move_right')
 	var left = Input.is_action_pressed('move_left')
+	var up = Input.is_action_pressed('move_up')
+	var down = Input.is_action_pressed('move_down')
 	var jump = Input.is_action_just_pressed('ui_select')
 
-	if jump and is_on_floor():
-		jumping = true
-		velocity.y = jump_speed
+	#if jump and is_on_floor():
+		#jumping = true
+		#velocity.y = jump_speed
 	if right:
 		$Sprite2D.flip_h = false
 		velocity.x += run_speed
 	if left:
 		$Sprite2D.flip_h = true
 		velocity.x -= run_speed
+	if up:
+		velocity.y += run_speed
+	if down:
+		velocity.y -= run_speed
 
 func _physics_process(delta):
 	get_input()
