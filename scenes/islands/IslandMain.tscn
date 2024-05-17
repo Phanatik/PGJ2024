@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://mt2g00bmahyf"]
+
+[ext_resource type="PackedScene" uid="uid://d3qbotjutbvim" path="res://scenes/islands/IslandZero.tscn" id="1_6yfka"]
+[ext_resource type="PackedScene" uid="uid://cbc6dhmo3m4ah" path="res://classes/player/Player.tscn" id="2_c4au8"]
+
+[node name="IslandMain" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_6yfka")]
+position = Vector2(48, 323)
+scale = Vector2(4, 4)
+
+[node name="Player" parent="." instance=ExtResource("2_c4au8")]
+position = Vector2(145, -252)

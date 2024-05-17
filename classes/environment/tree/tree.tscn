@@ -1,47 +1,71 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=14 format=3 uid="uid://yfd4ya0mycxt"]
 
-[ext_resource path="res://assets/environment/tree/tree1.png" type="Texture2D" id=1]
-[ext_resource path="res://assets/environment/tree/treepot.png" type="Texture2D" id=2]
-[ext_resource path="res://classes/environment/tree/tree.gd" type="Script" id=3]
-[ext_resource path="res://assets/environment/tree/tree3.png" type="Texture2D" id=4]
-[ext_resource path="res://assets/environment/tree/tree7.png" type="Texture2D" id=5]
-[ext_resource path="res://assets/environment/tree/tree8.png" type="Texture2D" id=6]
-[ext_resource path="res://assets/environment/tree/tree2.png" type="Texture2D" id=7]
-[ext_resource path="res://assets/environment/tree/tree4.png" type="Texture2D" id=8]
-[ext_resource path="res://assets/environment/tree/tree5.png" type="Texture2D" id=9]
-[ext_resource path="res://assets/environment/tree/tree6.png" type="Texture2D" id=10]
+[ext_resource type="Texture2D" uid="uid://wnxxualelj67" path="res://assets/environment/tree/tree1.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://056vfn1bs20u" path="res://assets/environment/tree/treepot.png" id="2"]
+[ext_resource type="Script" path="res://classes/environment/tree/tree.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://fqamqhhelm1j" path="res://assets/environment/tree/tree3.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://dd6n0rlsepb8e" path="res://assets/environment/tree/tree7.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b638swpd5iv8t" path="res://assets/environment/tree/tree8.png" id="6"]
+[ext_resource type="Texture2D" uid="uid://dwfal7gvshy6g" path="res://assets/environment/tree/tree2.png" id="7"]
+[ext_resource type="Texture2D" uid="uid://cdcvw40e60gfh" path="res://assets/environment/tree/tree4.png" id="8"]
+[ext_resource type="Texture2D" uid="uid://y2o1cptnlnlb" path="res://assets/environment/tree/tree5.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://dndjyyhe35ko7" path="res://assets/environment/tree/tree6.png" id="10"]
 
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 6 ) ],
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6")
+}],
 "loop": true,
-"name": "default",
+"name": &"default",
 "speed": 5.0
-} ]
+}]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 53.8406, 33.6566 )
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(107.681, 67.3132)
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 33.3491, 34.7943 )
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(66.6982, 69.5886)
 
 [node name="TreePot" type="StaticBody2D"]
-script = ExtResource( 3 )
+script = ExtResource("3")
 
 [node name="Pot" type="Sprite2D" parent="."]
-texture = ExtResource( 2 )
+texture = ExtResource("2")
 
 [node name="tree" type="AnimatedSprite2D" parent="."]
-position = Vector2( 0, -94 )
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 3 )
+position = Vector2(0, -94)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("3")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="InteractBox" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 2.62012, 1.47457 )
-shape = SubResource( 1 )
+position = Vector2(2.62012, 1.47457)
+shape = SubResource("1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 3.57166, 2.3811 )
-shape = SubResource( 2 )
+position = Vector2(3.57166, 2.3811)
+shape = SubResource("2")
