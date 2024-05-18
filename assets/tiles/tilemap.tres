@@ -39,7 +39,6 @@ texture_region_size = Vector2i(32, 32)
 
 [resource]
 tile_shape = 1
-tile_layout = 4
 tile_size = Vector2i(32, 16)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hndb3")
