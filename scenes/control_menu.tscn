@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bh3m1426pcjo5"]
+[gd_scene load_steps=4 format=3 uid="uid://bh3m1426pcjo5"]
 
 [ext_resource type="Script" path="res://scripts/control_menu.gd" id="1_r0eje"]
+[ext_resource type="Texture2D" uid="uid://8bbf4bhnxo3b" path="res://assets/player/Zesh.png" id="2_7inh3"]
+
+[sub_resource type="Theme" id="Theme_4e7xn"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -21,12 +24,13 @@ grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -44.0
-offset_right = 128.0
-grow_vertical = 0
+offset_top = 604.0
+offset_right = -1024.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Back" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -37,11 +41,49 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -391.0
+offset_left = 221.0
+offset_top = 213.0
+offset_right = -787.0
 offset_bottom = -97.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Controls:
-"
+
+Interact: E
+Moveing: WASD"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.997
+offset_left = 720.0
+offset_top = 206.0
+offset_bottom = -0.0560303
+grow_horizontal = 0
+text = "My grandmother would tell me that life is bound between the rings. The more there are, the stronger the binding and only the giants can have so many rings. They start small, barely bigger than a pebble and then they tower over everything. She says that one day we’ll leave this place and the giants will save the land.
+My grandfather tells me different stories like how we were strong once. So strong, we had a leader who could command armies and held dominion as far as the eye could see. He sounds like he’s making it up but if not for his eyes, I would have stopped believing him. 
+I couldn’t have known any of this. I was born under torchlight surrounded by rock walls. I can feel myself dying. This place eats away at me. I have to get out or I’ll die here. I will risk the blasphemy of taking a child of the giants if it means the world will heal. 
+
+Forgive me, grandparents, for these sins.
+I will find life in the rings."
+
+[node name="Zesh" type="Sprite2D" parent="."]
+position = Vector2(917, 128)
+texture = ExtResource("2_7inh3")
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 897.0
+offset_top = 31.0
+offset_right = -211.0
+offset_bottom = -594.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4e7xn")
+text = "Zesh"
 
 [connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
