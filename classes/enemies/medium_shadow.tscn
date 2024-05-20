@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf60ogt0h4b2v"]
+
+[ext_resource type="Texture2D" uid="uid://b6iere8ae7r80" path="res://assets/enemies/medium_shadow_spritesheet.png" id="1_kkcvb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vw0ho"]
+
+[node name="MediumShadow" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vw0ho")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_kkcvb")
+vframes = 4

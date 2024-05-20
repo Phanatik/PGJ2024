@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d3qbotjutbvim"]
 
-[ext_resource type="TileSet" uid="uid://b801me6icddex" path="res://assets/tiles/IslandSet.tres" id="1_gjh6y"]
+[ext_resource type="TileSet" uid="uid://2i1jiwetu5j0" path="res://assets/tiles/IslandSet.tres" id="1_gjh6y"]
 
 [node name="TileMap" type="TileMap"]
 y_sort_enabled = true

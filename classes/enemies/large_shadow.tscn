@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhqfd7n8p01yd"]
+
+[ext_resource type="Texture2D" uid="uid://cwdlq8w7axrv0" path="res://assets/enemies/large_shadow_spritesheet.png" id="1_poya5"]
+[ext_resource type="Script" path="res://classes/enemies/shadows.gd" id="1_xkrtl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vw0ho"]
+
+[node name="LargeShadow" type="CharacterBody2D"]
+script = ExtResource("1_xkrtl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vw0ho")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_poya5")
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

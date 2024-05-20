@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bh3m1426pcjo5"]
+[gd_scene load_steps=4 format=3 uid="uid://dvj42c6mluqbw"]
 
 [ext_resource type="Script" path="res://scripts/control_menu.gd" id="1_r0eje"]
 [ext_resource type="Texture2D" uid="uid://8bbf4bhnxo3b" path="res://assets/player/Zesh.png" id="2_7inh3"]
