@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8f42e3aor2xs"]
+[gd_scene load_steps=4 format=3 uid="uid://c8f42e3aor2xs"]
 
 [ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_l6q04"]
 [ext_resource type="Texture2D" uid="uid://bimoas6i2ns8c" path="res://assets/menu/Main-menu_art.png" id="2_i1nyp"]
+[ext_resource type="Texture2D" uid="uid://cccput2yhxp23" path="res://assets/menu/Button.svg" id="3_wo0r0"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -21,40 +22,76 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_i1nyp")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -33.0
-offset_right = 23.0
-offset_bottom = 33.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
-layout_mode = 2
-
-[node name="StartButton" type="Button" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-text = "Start"
-
-[node name="Controls" type="Button" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-text = "Controls"
-
-[node name="QuitButton" type="Button" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-text = "Quit"
-
 [node name="TITLE" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 399.0
 offset_bottom = 304.0
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/Controls" to="." method="_on_controls_pressed"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 9.0
+offset_top = 251.0
+offset_right = 279.0
+offset_bottom = 397.0
+
+[node name="StartButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_wo0r0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/StartButton"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 81.0
+offset_top = 12.0
+offset_right = -95.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Start Game[/center]"
+
+[node name="controls" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_wo0r0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/controls"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 96.0
+offset_top = 10.0
+offset_right = -100.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Controls
+[/center]"
+
+[node name="quit" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_wo0r0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/quit"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 11.0
+offset_right = -106.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+text = "[center]Quit[/center]"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

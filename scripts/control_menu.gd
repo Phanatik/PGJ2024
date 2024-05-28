@@ -11,6 +11,6 @@ func _process(delta):
 	pass
 
 
-func _on_back_pressed():
+func _on_texture_button_pressed():
 	var scene = load("res://scenes/MainMenu.tscn")
 	get_tree().change_scene_to_packed(scene)

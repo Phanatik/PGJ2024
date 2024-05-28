@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bh3m1426pcjo5"]
+[gd_scene load_steps=5 format=3 uid="uid://bh3m1426pcjo5"]
 
 [ext_resource type="Script" path="res://scripts/control_menu.gd" id="1_r0eje"]
 [ext_resource type="Texture2D" uid="uid://8bbf4bhnxo3b" path="res://assets/player/Zesh.png" id="2_7inh3"]
+[ext_resource type="Texture2D" uid="uid://cccput2yhxp23" path="res://assets/menu/Button.svg" id="2_ax2qo"]
 
 [sub_resource type="Theme" id="Theme_4e7xn"]
 
@@ -27,14 +28,29 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = 604.0
-offset_right = -1024.0
+offset_left = 2.0
+offset_top = 603.0
+offset_right = -880.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Back" type="Button" parent="VBoxContainer"]
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
 layout_mode = 2
-text = "BACK"
+texture_normal = ExtResource("2_ax2qo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/TextureButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -13.109
+anchor_right = 4.259
+anchor_bottom = 1.0
+offset_left = 112.0
+offset_top = 615.014
+offset_right = -981.93
+offset_bottom = -1.0
+bbcode_enabled = true
+text = "Back"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 1
@@ -86,4 +102,4 @@ grow_vertical = 2
 theme = SubResource("Theme_4e7xn")
 text = "Zesh"
 
-[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]
